@@ -12,9 +12,9 @@ if (len(sys.argv) <= 1): # 외부에서 파이썬으로 넘어오는 파라미�
 
 regionNumber = sys.argv[1] # 외부에서 파이썬으로 넘어오는 파라미터 (regionNumber: 지역번호)
 
-api_addr = "https://www.kma.go.kr/plus/rss/mid-term-rss3.jsp"
+api_addr = "https://www.weather.go.kr/w/weather/forecast/mid-term.do"
 values = {
-    'stnId' : regionNumber
+    'stnId1' : regionNumber
 }
 params = parse.urlencode(values) # String 타입을 Binary 타입으로 인코딩
 url = api_addr + "?" + params # ?는 url에서 쿼리스트링을 의미
