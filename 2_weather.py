@@ -24,7 +24,8 @@ def main():
             elif (index_td >= 2): 
                 min_temperature = td.find("span", class_="tmn").text.strip() # strip()을 통해 양쪽 공백 제거
                 max_temperature = td.find("span", class_="tmx").text.strip() # strip()을 통해 양쪽 공백 제거
-        print(f"[{city}] → min_temp: {min_temperature} max_temp: {max_temperature}")
+            if (index_td != 0 and index_td != 1):
+                print(f"[{city}] → min_temp: {min_temperature} max_temp: {max_temperature}")
 
 if __name__ == "__main__":
     main()
